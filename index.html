@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Website Title</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 背景视频 -->
+  <video class="background-video" autoplay muted loop>
+    <source src="65772-515379427_medium.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+  <div class="container">
+    <!-- 页眉 -->
+    <header>
+      <h1>Your Website Title</h1>
+    </header>
+
+    <!-- 顶部导航 -->
+    <nav>
+      <a href="#" onclick="loadPage('homepage.html')">HOME</a>
+      <a href="#" onclick="loadPage('portfolio.html')">PORTFOLIO</a>
+      <a href="#" onclick="loadPage('trivia.html')">TRIVIA</a>
+    </nav>
+
+    <!-- 主内容：iframe -->
+    <iframe id="content-frame" src="homepage.html" name="content-frame"></iframe>
+
+    <!-- 页脚 -->
+    <footer>
+      <p>Created July 2025 | <a href="#">My Blog</a></p>
+    </footer>
+  </div>
+
+  <script>
+    function loadPage(page) {
+      document.getElementById('content-frame').src = page;
+    }
+  </script>
+</body>
+</html>

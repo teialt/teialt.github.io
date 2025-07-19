@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tip Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="main">
+    <!-- 左侧栏保持不变 -->
+    <div class="left-sidebar">
+      <h3>Photography Resources</h3>
+      <ul>
+        <li><a href="https://www.cambridgeincolour.com" target="_blank" rel="noopener">Cambridge in Colour</a></li>
+        <li><a href="https://digital-photography-school.com" target="_blank" rel="noopener">Digital Photography School</a></li>
+        <li><a href="https://photographylife.com" target="_blank" rel="noopener">Photography Life</a></li>
+        <li><a href="https://petapixel.com/tutorials" target="_blank" rel="noopener">PetaPixel Tutorials</a></li>
+        <li><a href="https://fstoppers.com" target="_blank" rel="noopener">Fstoppers</a></li>
+      </ul>
+    </div>
+
+    <!-- 中间内容改为 Tip Calculator -->
+    <div class="content">
+      <h2>Tip Calculator</h2>
+      <form onsubmit="return calculateTip()">
+        <label for="billAmount">Bill Amount ($):</label><br>
+        <input
+          type="number"
+          id="billAmount"
+          min="0"
+          step="0.01"
+          placeholder="e.g. 100.00"
+        ><br>
+
+        <label for="tipRate">Tip Percentage (%):</label><br>
+        <input
+          type="number"
+          id="tipRate"
+          min="0"
+          step="1"
+          placeholder="e.g. 15"
+        ><br>
+
+        <input type="submit" value="Calculate Tip">
+      </form>
+      <p id="tipResult" style="margin-top:8px; font-weight:bold;"></p>
+    </div>
+
+    <!-- 右侧栏保持不变 -->
+    <div class="right-sidebar">
+      <h3>Contact Me</h3>
+      <form>
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Email">
+        <textarea rows="4" placeholder="Message"></textarea>
+        <input type="submit" value="Send">
+      </form>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

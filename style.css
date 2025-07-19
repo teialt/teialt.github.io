@@ -1,0 +1,141 @@
+/* ---------- 重置 & 背景 ---------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;          /* 去掉全局滚动条 */
+  font-family: Arial, sans-serif;
+}
+
+.background-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* ---------- 容器 & 完全居中 ---------- */
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* 垂直居中 */
+  align-items: center;       /* 水平居中 */
+  height: 100%;
+  gap: 8px;
+  padding: 0;
+}
+
+/* ---------- 头部 / 导航 / 页脚 (圆角) ---------- */
+header, nav, footer {
+  width: 90vw;
+  max-width: 800px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 12px;
+  color: #fff;
+  text-align: center;
+  padding: 12px 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+nav {
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  padding: 8px 0;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- iframe 主区域 ---------- */
+iframe#content-frame {
+  width: 90vw;
+  max-width: 800px;
+  border: none;
+  display: block;
+  height: 60vh;             /* 占据 60% 视口高度，避免被遮挡 */
+  overflow-y: auto;         /* 允许在 iframe 内部滚动 */
+}
+
+/* ---------- 三栏布局 (.main 在子页面中) ---------- */
+body > .main {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  width: 90vw;
+  max-width: 800px;
+  margin: 0;                /* 与导航、页脚紧贴 */
+}
+
+.left-sidebar,
+.right-sidebar {
+  flex: 1;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 15px;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.content {
+  flex: 2;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.45);
+  border-radius: 12px;
+  color: #fff;
+  font-size: 1rem;
+}
+
+/* ---------- 表格 / 表单 ---------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  background: #fff;
+  color: #000;
+  font-size: 1rem;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background: #eee;
+}
+
+form {
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+input,
+textarea {
+  width: 100%;              /* 占满父元素宽度 */
+  padding: 6px;
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
